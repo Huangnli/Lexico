@@ -1,6 +1,7 @@
-# Lexico
+## Lexico
 Analisador Léxico para MiniJava (Python)
-Questões Léxicas
+
+# Questões Léxicas
 Identificadores:
 Um identificador é uma sequência de letras, dígitos e sublinhados, começando com uma letra. As letras maiúsculas são diferenciadas das minúsculas. Neste manual de referência, o símbolo id representa um identificador.
 Literais inteiros:
