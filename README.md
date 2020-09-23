@@ -28,8 +28,6 @@ Requer Python 3.6 ou mais recente.
 
 Comando para baixar sly:
 
-$ sudo apt install python3-pip
-
 $ pip3 install sly
 
 
