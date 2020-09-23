@@ -20,9 +20,13 @@ Um comentário pode aparecer entre dois tokens quaisquer da linguagem. Existem d
 
 -outro começa com // e vai até o final da linha.
 
-### Para usar sly
-requer Python 3.6 ou mais recente.
-Comando para ter sly:
+# Para usar sly
+Requer Python 3.6 ou mais recente.
+
+Comando para baixar sly:
+
+$ sudo apt install python3-pip
+
 $ pip3 install sly
 
 
