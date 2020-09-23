@@ -1,4 +1,13 @@
-# Analisador Léxico para MiniJava (Python)
+# Analisador Léxico
+Código em Python do Analisador Léxico para a identificação dos átomos da linguagem MiniJava.
+
+# Para usar sly 
+Requer Python 3.6 ou mais recente.
+
+Comando para baixar sly:
+
+$ pip3 install sly
+
 # Questões Léxicas
 
 ## Identificadores:
@@ -11,6 +20,7 @@ Uma sequência de dígitos decimais é uma constante inteira que denota o valor 
 Um operador binário representa um dos seguintes símbolos:
 
 &&     <     +     -     *
+
 Neste documento de referência, o símbolo op representa um operador binário.
 
 ## Comentários:
@@ -19,3 +29,7 @@ Um comentário pode aparecer entre dois tokens quaisquer da linguagem. Existem d
 -um começa com / *, termina com * / e pode ser aninhado;
 
 -outro começa com // e vai até o final da linha.
+
+
+
+
