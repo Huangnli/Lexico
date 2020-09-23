@@ -11,6 +11,7 @@ Uma sequência de dígitos decimais é uma constante inteira que denota o valor 
 Um operador binário representa um dos seguintes símbolos:
 
 &&     <     +     -     *
+
 Neste documento de referência, o símbolo op representa um operador binário.
 
 ## Comentários:
@@ -20,7 +21,7 @@ Um comentário pode aparecer entre dois tokens quaisquer da linguagem. Existem d
 
 -outro começa com // e vai até o final da linha.
 
-# Para usar sly
+# Para usar sly no linux
 Requer Python 3.6 ou mais recente.
 
 Comando para baixar sly:
