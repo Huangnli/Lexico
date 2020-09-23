@@ -32,7 +32,6 @@ class CalcLexer(Lexer):
     LESS    = r'<'
     DOT     = r'\.'
     NOT     = r'!'
-
     # Átomos com regras de formação complexa e keywords
     ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
     ID['class']              = KEYWORD
@@ -55,6 +54,10 @@ class CalcLexer(Lexer):
     ID['new']                = KEYWORD
     ID['length']             = KEYWORD
     NUM = r'\d+'
+
+    @_(r'\n+')
+    def ignore_newline(self, t):
+        self.lineno += len(t.value)
 
     def error (self, t):
         print("Linha: %d - Caractere ilegal: %s" % (t.lineno, t.value))
