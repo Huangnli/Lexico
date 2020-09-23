@@ -1,4 +1,6 @@
-# Analisador Léxico para MiniJava (Python)
+# Analisador Léxico
+Código em Python do Analisador Léxico para a identificação dos átomos da linguagem MiniJava.
+
 # Questões Léxicas
 
 ## Identificadores:
