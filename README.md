@@ -19,3 +19,10 @@ Um comentário pode aparecer entre dois tokens quaisquer da linguagem. Existem d
 -um começa com / *, termina com * / e pode ser aninhado;
 
 -outro começa com // e vai até o final da linha.
+
+### Para usar sly
+requer Python 3.6 ou mais recente.
+Comando para ter sly:
+$ pip3 install sly
+
+
