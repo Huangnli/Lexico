@@ -1,6 +1,13 @@
 # Analisador Léxico
 Código em Python do Analisador Léxico para a identificação dos átomos da linguagem MiniJava.
 
+# Para usar sly 
+Requer Python 3.6 ou mais recente.
+
+Comando para baixar sly:
+
+$ pip3 install sly
+
 # Questões Léxicas
 
 ## Identificadores:
@@ -23,11 +30,6 @@ Um comentário pode aparecer entre dois tokens quaisquer da linguagem. Existem d
 
 -outro começa com // e vai até o final da linha.
 
-# Para usar sly 
-Requer Python 3.6 ou mais recente.
 
-Comando para baixar sly:
-
-$ pip3 install sly
 
 
