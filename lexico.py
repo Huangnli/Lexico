@@ -6,7 +6,7 @@ class CalcLexer(Lexer):
     # Set of token names. This is always required 
     tokens = { ID, NUM, PLUS, MINUS, TIMES, DIVIDE, EQUAL, 
                LPAREN, RPAREN, LBRACK, RBRACK, LBRACE, RBRACE, 
-               SCOLON, COLON, AND, LESS, DOT, NOT, KEYWORD}
+               SCOLON, COLON, AND, LESS, DOT, NOT, KEYWORD, PRINT}
     
     # String containing ignored characters between tokens
     ignore = ' \t'
@@ -34,7 +34,10 @@ class CalcLexer(Lexer):
     DOT     = r'\.'
     NOT     = r'!'
     # Átomos com regras de formação complexa e keywords
+    PRINT = r'System\.out\.println'
+    PRINT['System.out.println'] = KEYWORD
     ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
+    ID['System.out.println'] = KEYWORD
     ID['class']              = KEYWORD
     ID['String']             = KEYWORD
     ID['public']             = KEYWORD
@@ -48,7 +51,6 @@ class CalcLexer(Lexer):
     ID['if']                 = KEYWORD
     ID['else']               = KEYWORD
     ID['while']              = KEYWORD
-    ID['System.out.println'] = KEYWORD
     ID['true']               = KEYWORD
     ID['false']              = KEYWORD
     ID['this']               = KEYWORD
