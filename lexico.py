@@ -1,4 +1,3 @@
-# calclex.py
 from sly import Lexer
 import sys
 
