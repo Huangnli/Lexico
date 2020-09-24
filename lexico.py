@@ -37,7 +37,6 @@ class CalcLexer(Lexer):
     PRINT = r'System\.out\.println'
     PRINT['System.out.println'] = KEYWORD
     ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
-    ID['System.out.println'] = KEYWORD
     ID['class']              = KEYWORD
     ID['String']             = KEYWORD
     ID['public']             = KEYWORD
