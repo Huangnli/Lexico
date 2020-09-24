@@ -61,7 +61,7 @@ class CalcLexer(Lexer):
         self.lineno += len(t.value)
 
     def error (self, t):
-        print("Linha: %d - Caractere ilegal: %s" % (t.lineno, t.value))
+        print("Linha: %d - Caractere ilegal: %s" % (t.lineno, t.value[0]))
         self.index += 1
 
 if __name__ == '__main__':
