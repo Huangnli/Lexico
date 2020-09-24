@@ -12,8 +12,13 @@ class CalcLexer(Lexer):
     ignore = ' \t'
     ignore_EOF  = 'EOF'
     ignore_comment = r'//.*'
-    ignore_comment2 = r'/\*(.|\n)*\*/'
-    
+
+    @_(r'/\*(.|\n)*\*/') # ignora comentario /* */
+    def ignore_comment2(self, t):
+        for i in t.value:
+            if i == '\n':
+                self.lineno += 1
+
     # Regular expression rules for tokens
     # Átomos que representam símbolos da linguagem
     PLUS    = r'\+'
