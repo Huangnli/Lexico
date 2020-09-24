@@ -10,6 +10,7 @@ class CalcLexer(Lexer):
     
     # String containing ignored characters between tokens
     ignore = ' \t'
+    ignore_EOF  = 'EOF'
     ignore_comment = r'//.*'
     ignore_comment2 = r'/\*(.|\n)*\*/'
     
