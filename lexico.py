@@ -38,9 +38,12 @@ class CalcLexer(Lexer):
     DOT     = r'\.'
     NOT     = r'!'
     # Átomos com regras de formação complexa e keywords
-    PRINT = r'System\.out\.println'
-    PRINT['System.out.println'] = KEYWORD
+    #PRINT = r'System\.out\.println'
+    #PRINT['System.out.println'] = KEYWORD
     ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
+    ID['System']             = KEYWORD
+    ID['out']                = KEYWORD
+    ID['println']            = KEYWORD
     ID['class']              = KEYWORD
     ID['String']             = KEYWORD
     ID['public']             = KEYWORD
@@ -61,12 +64,12 @@ class CalcLexer(Lexer):
     ID['length']             = KEYWORD
     NUM = r'\d+'
 
-    @_(r'\n+')
+    @_(r'\n+') # ignorar \n e add número de linha
     def ignore_newline(self, t):
         self.lineno += len(t.value)
 
-    def error (self, t):
-        print("Linha: %d - Caractere ilegal: %s" % (t.lineno, t.value[0]))
+    def error (self, t): # Caractere ilegal encontrado
+        print('Linha: %d - Caractere ilegal: "%s"' % (t.lineno, t.value[0]))
         self.index += 1
 
 if __name__ == '__main__':
@@ -79,6 +82,6 @@ if __name__ == '__main__':
             arq.close()
             lexer = CalcLexer()
             for tok in lexer.tokenize(data):
-                print('[ %r, %r, %r ]' % (tok.lineno, tok.type, tok.value))
+                print('[ %d, %s, "%s" ]' % (tok.lineno, tok.type, tok.value))
         except:
             print("Arquivo nao existe!")
